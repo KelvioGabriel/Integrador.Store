@@ -1,0 +1,126 @@
+﻿@model Integrador.Web.Models.UserRegister
+
+@{
+    ViewData["Title"] = "Registro de novo usuário";
+}
+
+<section class="section-conten padding-y container" style="min-height: 35vh">
+
+    <vc:Summary></vc:Summary>
+
+    <div class="card mx-auto" style="max-width: 380px; margin-top: 100px;">
+
+        <div class="card-body">
+            <h4 class="card-title mb-4">Seja bem vindo!</h4>
+
+            <form asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+
+                <div class="form-group">
+                    <label asp-for="Client.Name"></label>
+                    <input asp-for="Client.Name" class="form-control" />
+                    <span asp-validation-for="Client.Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Client.Birth"></label>
+                    <input asp-for="Client.Birth" class="form-control" />
+                    <span asp-validation-for="Client.Birth" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Client.Cpf"></label>
+                    <input asp-for="Client.Cpf" class="form-control" />
+                    <span asp-validation-for="Client.Cpf" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <hr />
+
+                <div class="form-group">
+                    <label asp-for="Client.AddressClient.PostalCode"></label>
+                    <input asp-for="Client.AddressClient.PostalCode" class="form-control" />
+                    <span asp-validation-for="Client.AddressClient.PostalCode" class="text-danger">
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Client.AddressClient.Street"></label>
+                    <input asp-for="Client.AddressClient.Street" class="form-control" />
+                    <span asp-validation-for="Client.AddressClient.Street" class="text-danger">
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Client.AddressClient.Number"></label>
+                    <input asp-for="Client.AddressClient.Number" class="form-control" />
+                    <span asp-validation-for="Client.AddressClient.Number" class="text-danger">
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Client.AddressClient.Complement"></label>
+                    <input asp-for="Client.AddressClient.Complement" class="form-control" />
+                    <span asp-validation-for="Client.AddressClient.Complement" class="text-danger">
+
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Client.AddressClient.Neighborhood"></label>
+                    <input asp-for="Client.AddressClient.Neighborhood" class="form-control" />
+                    <span asp-validation-for="Client.AddressClient.Neighborhood" class="text-danger">
+
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Client.AddressClient.City"></label>
+                    <input asp-for="Client.AddressClient.City" class="form-control" />
+                    <span asp-validation-for="Client.AddressClient.City" class="text-danger">
+
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Client.AddressClient.State"></label>
+                    <input asp-for="Client.AddressClient.State" class="form-control" />
+                    <span asp-validation-for="Client.AddressClient.State" class="text-danger">
+
+                    </span>
+                </div>
+
+                <hr />
+
+                <div class="form-group">
+                    <label asp-for="Password"></label>
+                    <input type="password" asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="PasswordConfirm"></label>
+                    <input type="password" asp-for="PasswordConfirm" class="form-control" />
+                    <span asp-validation-for="PasswordConfirm" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer text-center">
+            Já tem uma conta?
+            <a asp-controller="Identity" asp-action="Login"> Entrar</a>
+        </div>
+    </div>
+
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

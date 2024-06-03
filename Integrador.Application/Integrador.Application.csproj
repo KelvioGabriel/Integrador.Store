@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Integrador.Core\Integrador.Core.csproj" />
+    <ProjectReference Include="..\Integrador.Domain\Integrador.Domain.csproj" />
+    <ProjectReference Include="..\src\Integrador.Domain.Shared\Integrador.Domain.Shared\Integrador.Domain.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
